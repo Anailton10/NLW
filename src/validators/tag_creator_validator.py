@@ -4,7 +4,7 @@ from src.errors.error_types.http_unprocessable_entipy import HttpUnprocessableEn
 
 def tag_creator_validator(request) -> None:
     body_validator = Validator({
-        "product_code": {"type": "string", "requerid": True, "empty": False}
+        "product_code": {"type": "string", "requerid": True, "empty": False},
     })
 
     response = body_validator.validate(request.json)
